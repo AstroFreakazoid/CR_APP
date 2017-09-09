@@ -14,5 +14,37 @@
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
     <p>{{item.about}}</p>
+    <ion-list>
+      <ion-item>
+        <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+          <ion-label range-left>-200</ion-label>
+          <ion-label range-right>200</ion-label>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="20" max="80" step="2" [(ngModel)]="brightness">
+          <ion-icon small range-left name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>step=100, snaps, </ion-label>
+        <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>dual, step=3, snaps, </ion-label>
+        <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="21" max="72" step="3" snaps="true"></ion-range>
+      </ion-item>
+    </ion-list>
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4042191.9451941065!2d-87.05279522526142!3d8.357011349044356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f92e56221acc925%3A0x6254f72535819a2b!2sCosta+Rica!5e0!3m2!1sen!2scr!4v1504932898900" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
   </div>
 </ion-content>
